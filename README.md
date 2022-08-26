@@ -1,70 +1,29 @@
-# Getting Started with Create React App
+## Author: 
+#### Aditya Gupta
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Name: 
+#### Browse Marvel Characters
 
-## Available Scripts
+The project was bootstrapped with CRA so that tooling can be enabled if asked later during hiring process. 
 
-In the project directory, you can run:
+## Getting started
 
-### `npm start`
+### Pre-requisites
+Node should be installed on the system. Minimum expected version is Node 16.14.2
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Instructions
+1. Install the application dependencies by running `npm i` on the terminal from project directory. 
+2. Once the dependencies are installed, run `npm start`. This should run the application and open the browser with the local web link.
+3. In case of any difficulties running/building the application please feel free to reach out the author at aditya@aapastech.com
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Thought process
+Below I share rationale behind some decisions.:-
+    1. CRA: Was easiest to bootstrap the react app. No changes have been made to default additions of CRA, irrespective of used or not. For example test files are still there, because that is not part of evaluation.
+    2. Used SCSS instead CSS so that Styling can be improvised and scoped. It can also be organized using Models like BEM.
+    3. Used react-router-dom so that routing can be established. Without that some corner cases (like what happens when user reloads the page while being in details view will need exception handling.)
+    4. Test description mentions list the characters (for example like a table). I have not used table so that the implementation can be evaluated from custom list perspective as well. Using some table/grid library would have hidden implementation details that evaluator might want to assess. Because of this sort will be seen as a single-select dropdown (for simplicity), thus one sort at a time even though the API supports sort by multiple fields. This could otherwise be facilitated by using priority order setting input component.
+    5. Typescript has not been used since the application is quite small and thats also not in scope of assessment apparently.
+    6. Absolute imports have been enabled to simplify and organize imports
+    7. The count of characters can be configured.
+    8. No UI framework has been used and thus the elements appear native as displayed by individual's browser
+    9. Due to shortage of time, the Filter component has been limited to include only two filters by name. It can be extended to incorporate filtering by other supported parameters.
